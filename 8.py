@@ -29,7 +29,7 @@ while (count < len(list1)):
         tmp = tmp + 1
     if (flag == 0 and list1[count] != 1 and list1[count] < lim):
         count1 += 1
-        list2.append(th)
+        list2.append(list1[count])
     count += 1
 
 print("Các số Fibonacci đồng thời là số nguyên tố nhỏ hơn", lim, "là: ", list2)
