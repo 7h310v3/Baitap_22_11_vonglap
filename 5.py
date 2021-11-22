@@ -11,12 +11,12 @@ while (lim < 0):
 num = 1
 count = 0
 while (count < lim):
-    cus = 2
+    tmp = 2
     flag = 0
-    while (cus <= math.sqrt(num)):
-        if ((num % cus) == 0):
+    while (tmp <= math.sqrt(num)):
+        if ((num % tmp) == 0):
             flag =  1
-        cus = cus + 1
+        tmp = tmp + 1
     if (flag == 0 and num != 1):
         list1.append(num)
         count += 1
