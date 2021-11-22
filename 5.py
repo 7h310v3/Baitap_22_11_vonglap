@@ -4,7 +4,6 @@ list1 = []
 
 lim = int(input("Nhập bao nhiêu số nguyên tố cần in ra: "))
 
-
 while (lim < 0):
   print("Nhập sai, xin nhập lại !(> 0)")
   lim = int(input("Nhập bao nhiêu số nguyên tố cần in ra: "))
