@@ -1,35 +1,29 @@
 import math
-lim = int(input("Nhập giới hạn: "))
+
 list1 = []
-list2 = []
+
+lim = int(input("Nhập bao nhiêu số nguyên tố cần in ra: "))
 
 while (lim < 0):
-  print("Nhập sai, xin nhập lại!(> 0)")
-  lim = int(input("Nhập giới hạn: "))
+  print("Nhập sai, xin nhập lại !(> 0)")
+  lim = int(input("Nhập bao nhiêu số nguyên tố cần in ra: "))
 
-count, fi, se = 0, 0, 1
-while (count < lim):
-  if(count <= 1):
-    th = count
-  else:
-    th = fi + se
-    fi = se
-    se = th
-  list1.append(th)
-  count += 1
-
+num = 1
 count = 0
-count1 = 0
-while (count < len(list1)):
-    flag = 0
+
+while (count < lim):
     tmp = 2
-    while (tmp <= math.sqrt(list1[count])):
-        if ((list1[count] % tmp) == 0):
+    flag = 0
+    for tmp in range(2, math.sqrt(num)):
+        if ((num % tmp) == 0):
             flag = 1
         tmp = tmp + 1
-    if (flag == 0 and list1[count] != 1 and list1[count] < lim):
-        count1 += 1
-        list2.append(list1[count])
-    count += 1
+    if (flag == 0 and num != 1):
+        list1.append(num)
+        count += 1
+    num += 1
 
-print("Các số Fibonacci đồng thời là số nguyên tố nhỏ hơn", lim, "là: ", list2)
+if(count > 0):
+    print("Các số nguyên tố là: ", list1)
+else:
+    print("Không có số nguyên tố nào cả!")
